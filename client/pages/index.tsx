@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 
-import Sidebar from './components/Sidebar';
-import Widget from './components/Widget';
-import Feed from './components/home/Feed';
+import Sidebar from '../components/Sidebar';
+import Widget from '../components/Widget';
+import Feed from '../components/home/Feed';
 
 const style = {
     wrapper: 'flex justify-center h-screen w-screen select-none bg-[#15202b] text-white',

@@ -6,9 +6,9 @@ A replica of Twitter Clone application on the blockchain
 
 # Frameworks used
 - Alchemy
-- Solidity (Data storage)
+- Solidity
 - Hardhat
-- Sanity.io
+- Sanity.io (Data storage)
 - React / NextJS
 - Tailwind css 3.0
 
