@@ -91,7 +91,9 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     setSelected={setSelected}
                     redirect={'/'}
                 />
-                <div className={style.tweetButton}>Mint</div>
+                <div className={style.tweetButton} setSelected={setSelected}>
+                    Mint
+                </div>
             </div>
             <div className={style.profileButton}>
                 <div className={style.profileLeft}></div>
