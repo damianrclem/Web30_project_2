@@ -8,7 +8,8 @@ import { BiHash } from 'react-icons/bi';
 import { FiBell, FiMoreHorizontal } from 'react-icons/fi';
 import { HiOutlineMail, HiMail } from 'react-icons/hi';
 import { FaRegListAlt, FaHashtag, FaBell } from 'react-icons/fa';
-import { CgMoreO } from 'react-icons/cg';
+import { CgMoreO, CgProfile } from 'react-icons/cg';
+import { BsBookmarkDashFill, BsBookmarkDash } from 'react-icons/bs';
 
 const style = {
     wrapper: `flex-[0.7] px-8 flex flex-col`,
@@ -64,7 +65,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                 />
                 <SidebarOption
                     text='Bookmarks'
-                    Icon={selected === 'Bookmarks' ? VscTwitter : VscTwitter}
+                    Icon={selected === 'Bookmarks' ? BsBookmarkDashFill : BsBookmarkDash}
                     isActive={Boolean(selected === 'Bookmarks')}
                     setSelected={setSelected}
                     redirect={'/'}
@@ -78,14 +79,14 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                 />
                 <SidebarOption
                     text='Profile'
-                    Icon={selected === 'Profile' ? VscTwitter : VscTwitter}
+                    Icon={selected === 'Profile' ? CgProfile : CgProfile}
                     isActive={Boolean(selected === 'Profile')}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
                 <SidebarOption
                     text='More'
-                    Icon={selected === 'More' ? VscTwitter : VscTwitter}
+                    Icon={selected === 'More' ? CgMoreO : CgMoreO}
                     isActive={Boolean(selected === 'More')}
                     setSelected={setSelected}
                     redirect={'/'}
