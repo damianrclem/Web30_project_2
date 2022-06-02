@@ -1,6 +1,6 @@
-# Web 3.0 Twitter Project on the Blockchain
+# Web 3.0 Twitter Clone Project on the Blockchain
 
-A replica of Twitter application on the blockchain
+A replica of Twitter Clone application on the blockchain
 
 ![Screen Shot 2022-06-01 at 3 30 58 PM](https://user-images.githubusercontent.com/68557040/171513280-69eaa4ac-c4f5-4d7f-ab37-e56f846d270d.png)
 
