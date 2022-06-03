@@ -1,5 +1,7 @@
 import { BsStar } from 'react-icons/bs';
 
+import Post from '../Post';
+
 import TweetBox from './TweetBox';
 
 import logo from '../../images/logo.svg';
@@ -16,7 +18,7 @@ const tweets = [
         userName: '0x787fEe51E380ff7b1d76819F4682d0C21B78D6D8',
         avatar: logo.src,
         text: 'gm',
-        isProfileImageNtf: false,
+        isProfileImageNtf: true,
         timestamp: new Date(),
     },
     {
@@ -61,8 +63,16 @@ const Feed = () => {
                 <BsStar />
             </div>
             <TweetBox />
-            {tweets.map((tweets, index) => (
-                <div></div>
+            {tweets.map((tweet, index) => (
+                <Post
+                    index={index}
+                    displayName={tweet.displayName}
+                    userName={tweet.userName}
+                    avatar={tweet.avatar}
+                    text={tweet.text}
+                    isProfileImageNtf={tweet.isProfileImageNtf}
+                    timestamp={tweet.timestamp}
+                />
             ))}
         </div>
     );
