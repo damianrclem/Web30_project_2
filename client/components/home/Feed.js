@@ -19,7 +19,7 @@ const tweets = [
         avatar: logo.src,
         text: 'gm',
         isProfileImageNtf: true,
-        timestamp: new Date(),
+        timestamp: '2022-09-03T21:26:43Z',
     },
     {
         displayName: 'Display Name',
@@ -27,7 +27,7 @@ const tweets = [
         avatar: logo.src,
         text: 'gm',
         isProfileImageNtf: false,
-        timestamp: new Date(),
+        timestamp: '2022-06-03T21:26:43Z',
     },
     {
         displayName: 'Display Name',
@@ -35,7 +35,7 @@ const tweets = [
         avatar: logo.src,
         text: 'gm',
         isProfileImageNtf: false,
-        timestamp: new Date(),
+        timestamp: '2022-07-03T21:26:43Z',
     },
     {
         displayName: 'Display Name',
@@ -43,7 +43,7 @@ const tweets = [
         avatar: logo.src,
         text: 'gm',
         isProfileImageNtf: false,
-        timestamp: new Date(),
+        timestamp: '2022-06-03T21:26:43Z',
     },
     {
         displayName: 'Display Name',
@@ -51,7 +51,7 @@ const tweets = [
         avatar: logo.src,
         text: 'gm',
         isProfileImageNtf: false,
-        timestamp: new Date(),
+        timestamp: '2022-09-03T21:26:43Z',
     },
 ];
 
@@ -65,9 +65,9 @@ const Feed = () => {
             <TweetBox />
             {tweets.map((tweet, index) => (
                 <Post
-                    index={index}
+                    key={index}
                     displayName={tweet.displayName}
-                    userName={tweet.userName}
+                    userName={`${tweet.userName.slice(0, 5)}...${tweet.userName.slice(-5)}`}
                     avatar={tweet.avatar}
                     text={tweet.text}
                     isProfileImageNtf={tweet.isProfileImageNtf}
