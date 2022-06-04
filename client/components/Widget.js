@@ -54,17 +54,18 @@ const Widget = () => {
                 <div className={style.title}>Who to follow</div>
                 {whoToFollow.map((item, index) => (
                     <div key={index} className={style.item}>
-                        <div>
+                        <div className={style.followAvatarContainer}>
                             <img
                                 src={item.avatar}
                                 alt={style.name}
                                 className={style.followAvatar}
                             />
                         </div>
-                        <div>
-                            <div></div>
-                            <div></div>
+                        <div className={style.profileDetails}>
+                            <div className={style.name}>{item.name}</div>
+                            <div className={style.handle}>{item.handle}</div>
                         </div>
+                        <div className={style.followButton}>Follow</div>
                     </div>
                 ))}
             </div>
