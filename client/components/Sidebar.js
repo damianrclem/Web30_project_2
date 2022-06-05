@@ -17,7 +17,7 @@ const style = {
     tweetButton: `bg-[#1d9bf0] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
     navContainer: `flex-1`,
     profileButton: `flex item-center justify-center cursor-pointer hover:bg-[#1a7bbc] h-[50px] my-[20px]`,
-    profileLeft: `flex item-center justify-center mr-4 border-r border-1 border-[#ccc]`,
+    profileLeft: `flex item-center justify-center mr-4`,
     profileImage: `height-12 w-12 rounded-full`,
     profileRight: `flex-1 flex`,
     details: `flex-1`,
