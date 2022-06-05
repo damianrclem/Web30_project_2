@@ -5,18 +5,21 @@ const style = {
     iconContainer: `text-xl mr-4`,
     textGeneral: `fort-medium`,
     textActive: `font-bold`,
+    disabled: `text-[#3b4b5b] hover:bg-transparent`,
 };
 
-const SidebarOption = ({ text, Icon, isActive, setSelected, redirect }) => {
+const SidebarOption = ({ text, Icon, isActive, disabled, setSelected, redirect }) => {
     const router = useRouter();
 
     return (
         <div
-            className={style.wrapper}
+            className={`${style.wrapper} ${disabled ? style.disabled : ''}`}
             onClick={() => {
-                setSelected(text);
-                if (redirect) {
-                    router.push(redirect);
+                if (!disabled) {
+                    setSelected(text);
+                    if (redirect) {
+                        router.push(redirect);
+                    }
                 }
             }}
         >

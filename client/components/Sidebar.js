@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { VscTwitter } from 'react-icons/vsc';
 
-import Link from 'next/link';
-
 import SidebarOption from './SidebarOption';
 
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri';
@@ -41,6 +39,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Home'
                     Icon={selected === 'Home' ? RiHome7Fill : RiHome7Line}
                     isActive={Boolean(selected === 'Home')}
+                    disabled={false}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -48,6 +47,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Explore'
                     Icon={selected === 'Explore' ? FaHashtag : BiHash}
                     isActive={Boolean(selected === 'Explore')}
+                    disabled={true}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -55,6 +55,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Notifications'
                     Icon={selected === 'Notifications' ? FaBell : FiBell}
                     isActive={Boolean(selected === 'Notifications')}
+                    disabled={true}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -62,6 +63,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Messages'
                     Icon={selected === 'Messages' ? HiMail : HiOutlineMail}
                     isActive={Boolean(selected === 'Messages')}
+                    disabled={true}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -69,6 +71,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Bookmarks'
                     Icon={selected === 'Bookmarks' ? BsBookmarkDashFill : BsBookmarkDash}
                     isActive={Boolean(selected === 'Bookmarks')}
+                    disabled={true}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -76,6 +79,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Lists'
                     Icon={selected === 'Lists' ? RiFileList2Fill : FaRegListAlt}
                     isActive={Boolean(selected === 'Lists')}
+                    disabled={true}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
@@ -83,6 +87,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='Profile'
                     Icon={selected === 'Profile' ? CgProfile : CgProfile}
                     isActive={Boolean(selected === 'Profile')}
+                    disabled={false}
                     setSelected={setSelected}
                     redirect={'/profile'}
                 />
@@ -90,6 +95,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     text='More'
                     Icon={selected === 'More' ? CgMoreO : CgMoreO}
                     isActive={Boolean(selected === 'More')}
+                    disabled={false}
                     setSelected={setSelected}
                     redirect={'/'}
                 />
