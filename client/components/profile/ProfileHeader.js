@@ -2,8 +2,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { BsArrowLeftShort } from 'react-icons/bs';
 
-import logo from '../../images/logo.svg';
-
 const cover = 'https://picsum.photos/1200/500?random=8';
 const currentAccount = '0x787fEe51E380ff7b1d76819F4682d0C21B78D6D8';
 
@@ -37,7 +35,7 @@ const ProfileHeader = () => {
                 </div>
                 <div className={style.details}>
                     <div className={style.primary}>Damian Clem</div>
-                    <div className={style.secondary}>4 Tweets</div>
+                    <div className={style.secondary}>3 Tweets</div>
                 </div>
             </div>
             <div className={style.coverPhotoContainer}>
