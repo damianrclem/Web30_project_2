@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { VscTwitter } from 'react-icons/vsc';
 
+import Link from 'next/link';
+
 import SidebarOption from './SidebarOption';
 
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri';
@@ -82,7 +84,7 @@ const Sidebar = ({ initialDefaultSelected = 'Home' }) => {
                     Icon={selected === 'Profile' ? CgProfile : CgProfile}
                     isActive={Boolean(selected === 'Profile')}
                     setSelected={setSelected}
-                    redirect={'/'}
+                    redirect={'/profile'}
                 />
                 <SidebarOption
                     text='More'
