@@ -68,6 +68,7 @@ const Widget = () => {
                         <div className={style.followButton}>Follow</div>
                     </div>
                 ))}
+                <div className={style.showMore}>Show More</div>
             </div>
         </div>
     );
