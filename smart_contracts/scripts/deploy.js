@@ -1,20 +1,20 @@
 const hre = require('hardhat');
 
-async function main() {
+const main = async () => {
     // We get the contract to deploy
-    const Twitter = await hre.ethers.getContractFactory('Twitter');
-    const twitter = await twitter.deploy('Hello, Hardhat!');
+    const profileImageMinterFactory = await hre.ethers.getContractFactory('ProfileImageNfts');
+    const profileImageContract = await profileImageMinterFactory.deploy();
 
-    await twitter.deployed();
+    await profileImageContract.deployed();
 
-    console.log('twitter deployed to:', twitter.address);
-}
+    console.log('Profile image minter deployed to:', profileImageContract.address);
+};
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main()
-    .then(() => process.exit(0))
-    .catch((error) => {
+async () => {
+    try {
+        await main();
+    } catch (error) {
         console.error(error);
         process.exit(1);
-    });
+    }
+};

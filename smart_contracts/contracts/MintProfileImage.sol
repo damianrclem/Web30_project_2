@@ -1,22 +1,22 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.2;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 
-contract ProfileImageNft is ERC771, Ownable {
+contract ProfileImageNfts is ERC721, Ownable {
 
   using Counters for Counters.Counter;
   using Strings for uint256;
 
   Counters.Counter _tokenId;
 
-  mapping(unit256 => string) _tokenURIs;
+  mapping(uint256 => string) _tokenURIs;
 
   struct RenderToken {
-    unit256 id;
+    uint256 id;
     string uri;
     string space;
   }  
@@ -33,6 +33,24 @@ contract ProfileImageNft is ERC771, Ownable {
     return RUri;
   }
 
-  
+  function getAlltoken() public view returns (RenderToken[] memory){
+      uint256 latestId = _tokenId.current();
+      RenderToken[] memory res = new RenderToken[](latestId);
+      for(uint256 i = 0; i  <= latestId ; i++){
+          if(_exists(i)){
+              string memory uri = tokenURI(i);
+              res[i] = RenderToken(i,uri," ");
+          }
+      }
+      return res;
+  }
+
+  function mint(address recipents, string memory _uri) public returns (uint256){
+      uint256 newId = _tokenId.current();
+      _mint(recipents,newId);
+      _setTokenURI(newId,_uri);
+      _tokenId.increment();
+      return newId;
+  }
 
 }
