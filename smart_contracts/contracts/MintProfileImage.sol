@@ -21,7 +21,7 @@ contract ProfileImageNfts is ERC721, Ownable {
     string space;
   }  
 
-  constructor() ERC721("ProfileImageNFTs", "PIN") {}
+  constructor() ERC721("ProfileImageNFTs", "DRC") {}
 
   function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal {
     _tokenURIs[tokenId] = _tokenURI;
@@ -51,6 +51,11 @@ contract ProfileImageNfts is ERC721, Ownable {
       _setTokenURI(newId,_uri);
       _tokenId.increment();
       return newId;
+  }
+
+  function contractAddress() public view returns (address) {
+    address contAddress = address(this); 
+    return contAddress;
   }
 
 }
